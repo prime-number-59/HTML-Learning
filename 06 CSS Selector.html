@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selector</title>
+        <style>
+            /*元素选择器*/
+            h2{
+                color:#000099;
+            }
+            h3{
+                /*背景颜色*/
+                background-color:#009900;
+            }
+            /*类选择器*/
+            .highlight{
+                color:#990000;
+            }
+            /*id选择器*/
+            #large{
+                /*字体样式*/
+                font-style:italic;
+                font-size:30px;
+            }
+            /*通用选择器*/
+            *{
+                font-family:Georgia;
+                font-weight:bolder;
+            }
+            /*子元素选择器（也可以记作div>p）*/
+            .father>p{
+                color:green;
+            }
+            /*后代选择器*/
+            .father p{
+                background-color:aqua;
+            }
+            /*相邻元素（兄弟）选择器*/
+            h5+p{
+                background-color:#88ffff88;
+            }
+            /*伪类选择器（这里鼠标悬停时背景变色）*/
+            #element:hover{
+                background-color:#7744ff;
+            }
+            /*伪元素选择器*/
+            ::after{
+                color:#000099;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Selector</h1>
+        <h2>Label Selector</h2>
+        <h3 class="highlight">Class Selector</h3>
+        <h3>Non-Class Slector</h3>
+        <h4 id="large">ID Selector</h4>
+
+        <!--div是h4和p的父元素，h4和p是div的子元素-->
+        <div class="father">
+            <p class="son">Child Selector</p>
+            <h4>Non-Child Selector</h4>
+            <div>
+                <!--这个p是最外层div的后代元素-->
+                <p class="grandson">Descendant Selector</p>
+            </div>
+        </div>
+
+        <p>p</p>
+        <h5>Brother Selector</h5>
+        <p>p</p>
+
+        <h5 id="element">Pseudo-Class Selectors</h5>
+    </body>
+</html>

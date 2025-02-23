@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Float</title>
+
+        <style>
+            .father{
+                background-color:aquamarine;
+                border:3px solid brown;
+                /*清除浮动带来的坍塌*/
+                overflow:hidden;
+            }
+            .left-son{
+                background-color:yellowgreen;
+                width:100px;
+                height:100px;
+                /*左浮动*/
+                float:left;
+            }
+            .right-son{
+                background-color:orange;
+                width:100px;
+                height:100px;
+                /*右浮动*/
+                float:right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="father">
+            <div class="left-son">Left-Float</div>
+            <div class="right-son">Right-Float</div>
+        </div>
+        <!--浮动出现坍塌的话，文本会直接出现在下方-->
+        <p>a text</p>
+    </body>
+</html>

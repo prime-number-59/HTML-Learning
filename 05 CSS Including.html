@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Including</title>
+
+        <!--内部样式表，选择器与属性键值对-->
+        <style>
+            h2{
+                color:blue;
+                /*字体大小（像素）*/
+                font-size:50px;
+            }
+            p{
+                color:brown;
+                /*字体大小（屏宽）*/
+                font-size:2vw;
+            }
+        </style>
+
+        <!--外部样式表-->
+        <link rel="stylesheet" href="css\style1.css">
+    </head>
+    <body>
+        <h1>h1</h1>
+        <!--使用了内部样式表-->
+        <h2>h2</h2>
+        <!--使用了内联样式-->
+        <h3 style="color:green;">h3</h3>
+        <!--使用了外部样式表-->
+        <h4>h4</h4>
+
+        <!--优先级-->
+        <p>Inline Styles > Internal Stylesheet > External Stylesheet</p>
+    </body>
+</html>

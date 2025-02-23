@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
+        <!--表单-->
+        <form>
+            <!--输入-->
+            <input type="text"><br>
+            <!--输入前有文字显示-->
+            <input type="text" placeholder="input"><br>
+            <!--输入，有标注、初始信息-->
+            <span>name</span>
+            <input type="text" value="prime_number_59"><br>
+            <!--输入，有标注（仅限输入）-->
+            <label>password</label>
+            <input type="text" placeholder="input"><br>
+            <!--与输入对应的属性（点击文字跳转）-->
+            <label for="q">press</label>
+            <input type="text" id="q"><br>
+            <!--输入，有隐藏-->
+            <label>password2</label>
+            <input type="password" placeholder="password"><br>
+        
+            <br><br>
+
+            <!--单选框-->
+            <label>day</label><br>
+            <input type="radio" name="a">Monday
+            <input type="radio" name="a">Tuesday
+            <input type="radio" name="a">Wednesday
+            <input type="radio" name="a">Thursday
+            <input type="radio" name="a">Friday
+            <input type="radio" name="a">Saturday
+            <input type="radio" name="a">Sunday
+            <br>
+
+            <!--多选框-->
+            <label>day</label><br>
+            <input type="checkbox">Monday
+            <input type="checkbox">Tuesday
+            <input type="checkbox">Wednesday
+            <input type="checkbox">Thursday
+            <input type="checkbox">Friday
+            <input type="checkbox">Saturday
+            <input type="checkbox">Sunday
+            <br>
+
+            <input type="submit" value="upload">
+        </form>
+
+        <br><hr><br>
+
+        <!--向某处发送提交后的数据（这里不跳转，起到占位作用）-->
+        <form action="#">
+            <input type="text">
+            <input type="submit" value="upload">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Control Statements</title>
+    </head>
+    <body>
+        <script>
+            /*定义年龄*/
+            let age=13;
+
+            /*判断age是否大于18（判断语句）*/
+            if(age>=18){
+                /*若age大于18则执行*/
+                console.log("你已经成年了！");
+            }else{
+                console.log("你是未成年人。");
+            }
+            let time=22;
+            if(time<12){
+                /*弹窗*/
+                alert("上午好！");
+            }else if(time<18){
+                alert("下午好！");
+            }else{
+                alert("晚上好！")
+            }
+            
+            /*循环*/
+            /*for(
+                初始化表达式（定义i=0）;
+                循环条件（当i<10时执行）;
+                迭代器（每一次循环后i增加1）;){
+                    循环体;
+                }
+            */
+
+            /*打印0~9*/
+            for(let i=0;i<10;i++){
+                console.log(i);
+            }
+            /*换行*/
+            console.log(" ");
+
+            /*while(循环条件){
+                    循环体;
+                }
+            */
+            /*打印0~13的数*/
+            let lyh=0;
+            while(lyh<=13){
+                lyh++;
+                console.log(lyh);
+            }
+            console.log(" ");
+
+            for(var i=0;i<114514;i++){
+                /*跳过本次循环（不输出12）*/
+                if(i==12){
+                    continue;
+                }
+                /*跳出循环（不输出17及以后的数）*/
+                if(i==17){
+                    break;
+                }
+                console.log(i);
+            }
+        </script>
+    </body>
+</html>
