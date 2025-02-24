@@ -10,8 +10,7 @@ a pack which record my html learning...
 - 08 Padding, Border and Margin
 - 09 Float
 - 10 Positioning
-- 11
-- JavaScript Including
+- 11 JavaScript Including
 - 12 JavaScript Variables
 - 13 JavaScript Control Statments
 - 14 JavaScrapt Function
