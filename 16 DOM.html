@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--三种div标签-->
+        <div id="box1">id</div>
+        <div class="box2">class</div>
+        <div>nothing</div>
+
+        <script>
+            /*获取相应元素*/
+            var id_e=document.getElementById("box1");
+            var class_e=document.getElementsByClassName("box2");
+            var e=document.getElementsByTagName("div");
+
+            /*打印对应元素，若值为数组则使用索引获取单独div*/
+            console.log(id_e);
+            console.log(class_e[0]);
+            console.log(e[2]);
+        </script>
+    </body>
+</html>

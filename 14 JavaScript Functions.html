@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Function</title>
+    </head>
+    <body>
+        <script>
+            /*函数（执行特定任务的代码组合，这里是输出"你好！"）*/
+            function hello(){
+                console.log("hello！");
+            }
+            /*调用函数*/
+            hello();
+
+            function hellostr(){
+                /*返回"你好2！"*/
+                return "hello2！";
+            }
+            /*什么也不会显示*/
+            hellostr();
+            /*打印函数hellostr的返回值*/
+            console.log(hellostr());
+            /*同上*/
+            let a=hellostr();
+            console.log(a);
+
+            /*输入参数的函数*/
+            function printing(text){
+                /*输出text*/
+                console.log("hello, "+text);
+            }
+            printing("LiYuHan");
+
+
+            /*作用域
+                在函数内部声明的变量有函数作用域，
+                在函数外部声明的变量有全局作用域
+            */
+            let global="global variable";
+            function local_function(){
+                let local="local variable";
+                console.log("global variable inside function: "+global);
+                console.log("local variable inside function: "+local);
+            }
+            local_function();
+
+            console.log("global variable outside function: "+global);
+            /*有报错，因为在全局中没有定义local*/
+            console.log("local variable outside function: "+local);
+        </script>
+    </body>
+</html>
