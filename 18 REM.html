@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--
+            viewport指视区或视口
+            width=device-width将视口设置为设备的宽度，确保网页内容不被缩放
+            initial-scale设置初始缩放级别为
+            minimum-scale和maximum-scale设置缩放比例最值
+        -->
+        <meta
+            name="viewport" 
+            content="width=device-width, initial-scale=1.0,
+            minimum-scale=1.0, maximum-scale=1.0"
+        >
+        <title>REM</title>
+        <style>
+/*          html{
+                //这里需要js来适配字体大小
+                font-size:20px;
+            }*/
+            .box-px{
+                width:300px;
+                height:100px;
+                background-color:aqua;
+                margin-bottom:50px;
+            }
+            .box-rem{
+                /*rem与html节点适配，使用字体大小*/
+                width:13rem;
+                height:3rem;
+                background-color:lime;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box-px">
+            Rem is a relative.
+        </div>
+        <div class="box-rem">
+            Rem is a relative.
+        </div>
+        <script>
+            /*根据设备宽度设定html标签的属性值（这里是设备宽度的1/20）*/
+            function resetHtmlFontSize(){
+                /*获取html根节点并修改style中的font-size，后面加单位*/
+                document.documentElement.style.fontSize=screen.width/20+"px";
+            }
+            resetHtmlFontSize();
+
+            /*然而还需要有判断更改屏幕宽度的事件*/
+            window.onresize=resetHtmlFontSize;
+        </script>
+    </body>
+</html>

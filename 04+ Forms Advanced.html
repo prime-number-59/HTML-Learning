@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms Advanced</title>
+    </head>
+    <body>
+        <!--method有两个请求方法：
+            get通过地址url传参，参数暴露在地址栏上，传输数据量小
+            post通过浏览器内部机制传输参数，参数不会暴露在url中，传输数据量大
+        -->
+        <form action="https://search.bilibili.com/all/" method="get">
+            <span>search on bilibili</span>
+            <!--
+                数据传到https://search.bilibili.com/all?keyword=
+                name用于传输数据，使后端接收表单字段
+            -->
+            <!--required使有了内容才能提交-->
+            <input type="text" name="keyword" required>
+            <input type="submit" value="go">
+        </form><hr>
+
+        <!--选择-->
+        <form action="https://search.bilibili.com/" >
+            <span>who are you?</span>
+
+            <!--checked的选项为默认值-->
+            <input type="radio" name="pn" checked>pn59
+            <input type="radio" name="pn">pn37
+
+            <!--各类标签-->
+            <br><span>age</span>
+            <input type="number" name="age">
+
+            <br><span>birthday</span>
+            <input type="date" name="birthday">
+
+            <br><span>password</span>
+            <input type="password" name="pwd">
+
+            <br><span>email</span>
+            <input type="email" name="email">
+
+            <br><span>color</span>
+            <input type="color" name="color">
+
+            <br><span>range</span>
+            <input type="range" name="range">
+
+            <br><span>city</span>
+            <select name="city" id="city">
+                <option value="Nanning">Nanning</option>
+                <option value="Guilin">Guilin</option>
+                <option value="Liuzhou">Liuzhou</option>
+                <option value="Beihai">Beihai</option>
+            </select>
+
+            <!--多行文本，cols是列数，rows是行数-->
+            <br><span>introduce</span>
+            <textarea name="introduce" id="introduce" cols="100" rows="10"></textarea>
+
+            <br><input type="submit" value="submit">
+            <input type="button" value="normal button">
+            <input type="reset" value="reset">
+        </form>
+    </body>
+</html>

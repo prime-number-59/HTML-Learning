@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add, Delete, Change and Search of a Table</title>
+        <style>
+            table{
+                width:100%;
+                border-collapse:collapse;
+                margin-top:8px;
+            }
+            th,td{
+                border:3px solid #aaaaaa;
+                text-align:center;
+                padding:2px;
+            }
+            th{
+                background-color:#aaaaaa;
+            }
+            button{
+                margin-left:2px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">Add, Delete and Change of a Table</h1>
+        <!--表格-->
+        <button onclick="adding()">add</button><br>
+        <!--输入需要查找的内容-->
+        <form action="">
+            <button onclick="searching()">search</button>
+            <input type="text">
+        </form>
+        
+        <table id="table">
+            <tr>
+                <th>name</th><th>number</th><th>edit</th>
+            </tr>
+            <tr>
+                <td>zhaoyingwei</td>
+                <td>20110120</td>
+                <td>
+                    <!--this指向当前上下文的对象-->
+                    <button onclick="changing(this)">change</button><button onclick="deleting(this)">del</button>
+                </td>
+            </tr>
+        </table>
+        <script src="./js/17table.js"></script>
+    </body>
+</html>

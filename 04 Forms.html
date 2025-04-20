@@ -10,18 +10,18 @@
         <form>
             <!--输入-->
             <input type="text"><br>
-            <!--输入前有文字显示-->
+            <!--placeholder使输入前有文字显示-->
             <input type="text" placeholder="input"><br>
-            <!--输入，有标注、初始信息-->
+            <!--value使输入前有初始信息-->
             <span>name</span>
             <input type="text" value="prime_number_59"><br>
-            <!--输入，有标注（仅限输入）-->
+            <!--label标注内容（仅限输入）-->
             <label>password</label>
             <input type="text" placeholder="input"><br>
-            <!--与输入对应的属性（点击文字跳转）-->
+            <!--for是与输入对应的属性（点击文字跳转），聚焦光标-->
             <label for="q">press</label>
             <input type="text" id="q"><br>
-            <!--输入，有隐藏-->
+            <!--password隐藏输入的文字-->
             <label>password2</label>
             <input type="password" placeholder="password"><br>
         
@@ -54,8 +54,8 @@
 
         <br><hr><br>
 
-        <!--向某处发送提交后的数据（这里不跳转，起到占位作用）-->
-        <form action="#">
+        <!--向action处发送提交后的数据（这里不跳转，起到占位作用）-->
+        <form action="#" method="">
             <input type="text">
             <input type="submit" value="upload">
         </form>

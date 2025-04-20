@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>DOM</title>
     </head>
     <body>
         <!--三种div标签-->
@@ -11,16 +11,42 @@
         <div class="box2">class</div>
         <div>nothing</div>
 
+        <button>button0</button>
+        <button>button1</button>
+
         <script>
             /*获取相应元素*/
             var id_e=document.getElementById("box1");
             var class_e=document.getElementsByClassName("box2");
             var e=document.getElementsByTagName("div");
+            var button_e=document.getElementsByTagName("button");
 
             /*打印对应元素，若值为数组则使用索引获取单独div*/
             console.log(id_e);
             console.log(class_e[0]);
             console.log(e[2]);
+            console.log(button_e[0]);
+
+            /*修改标签
+                innerHTML可以识别HTML元素，
+                innerText不可以
+            */
+            id_e.innerHTML="<a href='#'>skip</a>, id";
+            class_e[0].innerText="<a href='#'>skip</a>, class";
+            e[2].style.color="green";
+            e[2].style.fontSize="20px";
+
+            /*使用DOM属性绑定事件*/
+            button_e[0].onclick=function(){
+                /*匿名函数，不需要在其他地方调用，没有函数名*/
+                alert("DOM button0 was on click");
+            }
+            button_e[1].addEventListener("click",click_event);
+
+            /*使用过的函数*/
+            function click_event(){
+                alert("click1!");
+            }
         </script>
     </body>
 </html>
